@@ -29,6 +29,55 @@ __The common ideas will be:__
 * Health stealing??
 	* this can also just be damage and then healing as 2 separate commands
 
+## Data Structures
+
+### Overall damage tracking (1st step)
+
+Use json/dictionary format for this as it is very flexible and makes it easy to track multiple things with the same blob of data.
+
+```JSON5
+{
+	"player1": {
+		"health": 100,
+		"summons": 1,
+		"total_damage: [
+			{
+				"to": "player2",
+				"damage": 10
+			},
+			{
+				"to": "player3",
+				"damage": 5
+			}
+		],
+		"commander_damage": [
+			{
+				"to": "player2",
+				"damage": 3
+			}
+		]
+	},
+	"player2": {}
+}
+```
+
+### Damage event tracking
+
+Can keep track of all damage events with a `pandas` `dataframe`.
+
+* Not sure if health/healing will be its own table or if it can be in here as a -ve damage value, or as its own column?? Need to think about self healing (ie no other player) as well as life stealing.
+	* healing can be its own column and target can be the same player
+	* can possible add in event type to say whether it is healing/stealing/spell/creature etc
+
+| Caster | Target | Damage | Healing | Commander | Example of |
+| ---- | --- | ------ | --------- | ---- | --- |
+| p1 | p2 | 40 | 0 | false | normal damage |
+| p1 | p2 | 40 | 0 | true | commander damage |
+| p1 | p1 | 0 | 10 | false | self healing |
+| p1 | p2 | 0 | 10 | false | healing other player |
+| p1 | p2 | 10 | 0 | false | life stealing (dmg) |
+| p2 | p1 | 0 | 10 | false | life stealing (heal) |
+
 ## Development
 
 Intructions for how to get the code installed to run/develop on your computer.

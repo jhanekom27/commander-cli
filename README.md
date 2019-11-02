@@ -29,6 +29,24 @@ __The common ideas will be:__
 * Health stealing??
 	* this can also just be damage and then healing as 2 separate commands
 
+## Console outputs
+
+* Summary output after every actions
+* Have a detailed output upon request
+
+### Summary output
+
+* Players and health of each
+* Maybe min remaining commander damage? ie min of (21 - most dmg from another commander)
+	> This may be easier by adding in damage dealt and damage taken in the data??
+* maybe number of summons?
+* Should it look like a table or just a list view?
+
+```
+Player1: 40 HP
+Player2: 60 HP
+```
+
 ## Data Structures
 
 ### Overall damage tracking (1st step)

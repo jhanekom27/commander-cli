@@ -1,4 +1,5 @@
 # commander-cli
+# testing part 2
 
 Our beginning commander utility tool for tracking all MTG Commander things.
 
@@ -7,7 +8,7 @@ Our little practise project to boost our python skills. Starting with a simple c
 TESTING
 ## CLI features
 
-Two options: 
+Two options:
 
 1) Run the CLI that keeps the process going waiting for more instructions, or
 2) Cache the information somewhere and new commands affect that cache - think this will be nicer

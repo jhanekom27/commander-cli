@@ -4,6 +4,7 @@ Our beginning commander utility tool for tracking all MTG Commander things.
 
 Our little practise project to boost our python skills. Starting with a simple command line interface and then expand to more complex things.
 
+TESTING
 ## CLI features
 
 Two options: 
@@ -120,3 +121,5 @@ Will be using `git flow` methodology to keep things nice and tidy.
 
 * User interface of some kind
 * Use something like 'Click' to do all the CLI nexting
+
+some delta
